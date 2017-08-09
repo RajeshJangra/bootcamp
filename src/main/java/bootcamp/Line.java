@@ -1,5 +1,8 @@
 package bootcamp;
 
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
 public class Line {
     private Point start;
     private Point end;
@@ -23,6 +26,10 @@ public class Line {
 
     public void setEnd(final Point end) {
         this.end = end;
+    }
+
+    public double length() {
+        return (sqrt(pow(end.getX(), 2) - pow(start.getX(), 2)) + sqrt(pow(end.getY(), 2) - pow(start.getY(), 2)) + sqrt(pow(end.getZ(), 2) - pow(start.getX(), 2)))/3;
     }
 
     @Override
